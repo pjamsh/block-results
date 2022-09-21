@@ -1,0 +1,24 @@
+using System;
+class task {
+  static void Main() {
+      string[] S;
+      Console.WriteLine("Введите массив строк через запятую: ");
+      string stroka = Console.ReadLine();
+      S = stroka.Split(',');
+      var result = new string[S.Length];
+      var realSize = 0;
+      foreach (var value in S)
+      {
+          if (value.Length <= 3)
+          {
+              result[realSize] = value;
+              realSize++;
+              
+          }
+          
+      }
+      
+      Console.Write(string.Join(Environment.NewLine, result, 0, realSize));
+      
+  }
+}
